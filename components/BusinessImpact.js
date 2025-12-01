@@ -10,15 +10,7 @@ export default function BusinessImpact() {
                 <div className={styles.impactContent}>
                     <div className={styles.impactIllustration}>
                         <div className={styles.illustrationWrapper}>
-                            <div className={styles.cubeContainer}>
-                                <div className={styles.cube}>
-                                    <div className={styles.treeIcon}>🌲</div>
-                                </div>
-                                <div className={`${styles.arrow} ${styles.arrowUp}`}>↑</div>
-                                <div className={`${styles.arrow} ${styles.arrowDown}`}>↑</div>
-                                <div className={`${styles.arrow} ${styles.arrowLeft}`}>↑</div>
-                                <div className={`${styles.arrow} ${styles.arrowRight}`}>↑</div>
-                            </div>
+                            <img src="/section2.png" alt="Business Impact" />
                         </div>
                     </div>
                     <div className={styles.impactText}>
