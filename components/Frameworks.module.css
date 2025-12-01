@@ -1,0 +1,111 @@
+.frameworks {
+    padding: var(--spacing-3xl) 0;
+    background: var(--color-white);
+}
+
+.container {
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+}
+
+.frameworksContent {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-3xl);
+    align-items: center;
+}
+
+.sectionTitle {
+    font-size: 2.5rem;
+    font-weight: var(--font-weight-bold);
+    line-height: 1.2;
+    color: var(--color-text-primary);
+    margin-bottom: var(--spacing-md);
+}
+
+.sectionDescription {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    color: var(--color-text-secondary);
+    margin-bottom: var(--spacing-lg);
+}
+
+.btnPrimary {
+    background: var(--color-primary);
+    color: var(--color-white);
+    padding: 0.875rem 2rem;
+    border-radius: var(--radius-full);
+    font-weight: var(--font-weight-semibold);
+    font-size: 1rem;
+    box-shadow: 0 4px 12px rgba(45, 155, 155, 0.25);
+    transition: all var(--transition-base);
+}
+
+.btnPrimary:hover {
+    background: var(--color-primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(45, 155, 155, 0.35);
+}
+
+.frameworksImage {
+    position: relative;
+}
+
+.frameworksImageWrapper {
+    position: relative;
+    z-index: 2;
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+}
+
+.frameworksImageWrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(40px);
+    opacity: 0.6;
+    animation: float 6s ease-in-out infinite;
+    z-index: 1;
+}
+
+.blob4 {
+    width: 280px;
+    height: 280px;
+    background: var(--blob-teal);
+    top: -60px;
+    left: -60px;
+    animation-delay: 1s;
+}
+
+.blob5 {
+    width: 220px;
+    height: 220px;
+    background: var(--blob-purple);
+    bottom: -70px;
+    right: -70px;
+    animation-delay: 3s;
+}
+
+@media (max-width: 1024px) {
+    .frameworksContent {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-xl);
+    }
+
+    .sectionTitle {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .sectionTitle {
+        font-size: 1.75rem;
+    }
+}

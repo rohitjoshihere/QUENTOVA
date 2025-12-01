@@ -1,0 +1,189 @@
+.hero {
+    padding: var(--spacing-3xl) 0;
+    background: var(--color-white);
+    overflow: hidden;
+    /* background-color: red; */
+}
+
+.heroContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    /* gap: var(--spacing-2xl); */
+    gap: 0;
+}
+
+.heroText {
+    flex: 0 0 45%;
+    padding-left: var(--spacing-3xl);
+    animation: fadeInUp 0.8s ease;
+}
+
+.heroTitle {
+    font-size: 32px;
+    font-weight: 700;
+    width: 80%;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: var(--color-text-primary);
+    margin-bottom: var(--spacing-md);
+}
+
+.heroDescription {
+    font-size: 24px;
+    color: var(--color-text-primary);
+    margin-bottom: var(--spacing-lg);
+    line-height: 35px;
+    font-weight: 500;
+    width: 80%;
+}
+
+.btnPrimary {
+    background: var(--color-primary);
+    color: var(--color-white);
+    padding: 0.875rem 2rem;
+    border-radius: var(--radius-full);
+    font-weight: var(--font-weight-semibold);
+    font-size: 1rem;
+    box-shadow: 0 4px 12px rgba(45, 155, 155, 0.25);
+    transition: all var(--transition-base);
+}
+
+.btnPrimary:hover {
+    background: var(--color-primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(45, 155, 155, 0.35);
+}
+
+.heroImageContainer {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    animation: fadeInRight 0.8s ease;
+}
+
+.heroImage {
+    /* background-color: red; */
+    margin-right: -40px;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    max-width: 800px;
+}
+
+/* Blob Animations */
+.blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(60px);
+    opacity: 0.8;
+    animation: float 6s ease-in-out infinite;
+    z-index: 1;
+}
+
+.blob1 {
+    width: 300px;
+    height: 300px;
+    background: var(--blob-teal);
+    top: -50px;
+    right: -50px;
+    animation-delay: 0s;
+}
+
+.blob2 {
+    width: 250px;
+    height: 250px;
+    background: var(--blob-teal-light);
+    bottom: -80px;
+    left: -80px;
+    animation-delay: 2s;
+}
+
+.blob3 {
+    width: 200px;
+    height: 200px;
+    background: var(--blob-purple);
+    top: 50%;
+    right: -100px;
+    animation-delay: 4s;
+}
+
+/* Star Decorations */
+.star {
+    position: absolute;
+    font-size: 2rem;
+    z-index: 3;
+    animation: starTwinkle 2s ease-in-out infinite;
+}
+
+.star1 {
+    top: 10%;
+    right: 15%;
+    animation-delay: 0s;
+}
+
+.star2 {
+    bottom: 20%;
+    right: 5%;
+    animation-delay: 1s;
+}
+
+@keyframes starTwinkle {
+
+    0%,
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.6;
+        transform: scale(1.2);
+    }
+}
+
+@media (max-width: 1024px) {
+    .heroContent {
+        flex-direction: column;
+        gap: var(--spacing-xl);
+    }
+
+    .heroText {
+        flex: 1;
+        padding-left: var(--container-padding);
+        padding-right: var(--container-padding);
+    }
+
+    .heroImageContainer {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .heroTitle {
+        font-size: 2.75rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .heroTitle {
+        font-size: 2.25rem;
+    }
+
+    .heroText {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .heroTitle {
+        font-size: 1.875rem;
+    }
+
+    .heroText {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
