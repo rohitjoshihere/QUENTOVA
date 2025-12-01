@@ -28,8 +28,8 @@ export default function Frameworks() {
                                 height={600}
                             />
                         </div>
-                        <div className={`${styles.blob} ${styles.blob4}`}></div>
-                        <div className={`${styles.blob} ${styles.blob5}`}></div>
+                        {/* <div className={`${styles.blob} ${styles.blob4}`}></div> */}
+                        {/* <div className={`${styles.blob} ${styles.blob5}`}></div> */}
                     </div>
                 </div>
             </div>

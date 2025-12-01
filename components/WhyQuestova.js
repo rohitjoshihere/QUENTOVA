@@ -39,8 +39,8 @@ export default function WhyQuestova() {
                                 height={600}
                             />
                         </div>
-                        <div className={`${styles.blob} ${styles.blob6}`}></div>
-                        <div className={`${styles.blob} ${styles.blob7}`}></div>
+                        {/* <div className={`${styles.blob} ${styles.blob6}`}></div> */}
+                        {/* <div className={`${styles.blob} ${styles.blob7}`}></div> */}
                     </div>
                 </div>
             </div>
