@@ -4,18 +4,20 @@
 }
 
 .container {
-    max-width: var(--container-max-width);
+    /* max-width: var(--container-max-width); */
     margin: 0 auto;
-    padding: 0 var(--container-padding);
+    padding: 0 var(--spacing-3xl);
 }
 
 .sectionTitle {
+    
     font-size: 2.5rem;
     font-weight: var(--font-weight-bold);
     line-height: 1.2;
     color: var(--color-text-primary);
-    text-align: center;
-    max-width: 800px;
+    /* text-align: center; */
+
+    /* max-width: 800px; */
     margin: 0 auto var(--spacing-md);
 }
 
@@ -23,21 +25,23 @@
     font-size: 1.125rem;
     line-height: 1.7;
     color: var(--color-text-secondary);
-    text-align: center;
-    max-width: 900px;
+    /* text-align: center; */
+    /* max-width: 900px; */
     margin: 0 auto var(--spacing-2xl);
 }
 
 .servicesGrid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--spacing-xl);
+    grid-template-columns: 25% 50% 25%;
+    gap: var(--spacing-sm);
     margin-bottom: var(--spacing-xl);
 }
 
 .serviceCard {
     background: #FAFBFC;
-    border: 1px solid #F0F0F0;
+    /* border: 1px solid #F0F0F0; */
+    box-shadow: 0px 4px 35.8px -7px #B5B5B580;
+
     border-radius: var(--radius-lg);
     padding: 2.5rem 2rem;
     transition: all var(--transition-base);
@@ -90,7 +94,7 @@
 
 .serviceLink {
     color: var(--color-primary);
-    font-weight: var(--font-weight-semibold);
+    font-weight: 400;
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
@@ -105,26 +109,27 @@
 .paginationDots {
     display: flex;
     justify-content: center;
-    gap: 0.75rem;
+    gap: 5px;
 }
 
 .dot {
-    width: 10px;
-    height: 10px;
+    width: 14px;
+    height: 14px;
     border-radius: 50%;
-    background: var(--color-border);
+    background: #D9D9D9;
     transition: all var(--transition-base);
     cursor: pointer;
 }
 
 .dot.active {
-    background: var(--color-primary);
-    width: 30px;
+    background: #B7B4B4;
+    width: 65px;
+    height: 14px;
     border-radius: var(--radius-full);
 }
 
 .dot:hover {
-    background: var(--color-primary-light);
+    background: #B7B4B4;
 }
 
 @media (max-width: 1024px) {

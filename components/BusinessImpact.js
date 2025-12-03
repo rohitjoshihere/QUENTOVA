@@ -16,12 +16,12 @@ export default function BusinessImpact() {
                     <div className={styles.impactText}>
                         <h2 className={styles.sectionTitle}>Business Impact. Not Just Automation.</h2>
                         <p className={styles.sectionDescription}>
-                            At Questova, we don't just implement AI or automate processes—we transform how businesses operate. Our solutions are designed to deliver measurable ROI through increased efficiency, reduced costs, and enhanced decision-making capabilities.
+                            At Quentova, business impact comes first. AI is a means, not the mission. We help organizations rise above the noise of automation tools and technologies by focusing on what drives real value.
                         </p>
                         <p className={styles.sectionDescription}>
-                            We work closely with your team to understand your unique challenges and craft solutions that integrate seamlessly with your existing infrastructure, ensuring minimal disruption and maximum value from day one.
+                            By deeply understanding your processes, metrics, and pain points, we tailor the right mix of automation, talent, and intelligence to deliver outcomes that matter.
                         </p>
-                        <Button>Discover Our Impact</Button>
+                        {/* <Button>Discover Our Impact</Button> */}
                     </div>
                 </div>
             </div>

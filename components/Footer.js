@@ -13,11 +13,10 @@ export default function Footer() {
                             <Image
                                 src="/logo.jpg"
                                 alt="Questova Logo"
-                                width={40}
-                                height={40}
+                                width={100}
+                                height={100}
                                 className={styles.logoImage}
                             />
-                            <span className={styles.logoText}>Questova</span>
                         </div>
                         <p className={styles.footerDescription}>
                             We are a team of passionate innovators dedicated to helping businesses thrive in the age of AI and automation.

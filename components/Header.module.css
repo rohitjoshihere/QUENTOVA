@@ -49,7 +49,7 @@
 
 .navMenu {
     display: flex;
-    gap: 4rem;
+    gap: 4.5rem;
     align-items: center;
     list-style: none;
     margin: 0;

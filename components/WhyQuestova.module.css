@@ -1,13 +1,15 @@
-.whyQuestova {
+/* .whyQuestova {
     padding: var(--spacing-3xl) 0;
     background: linear-gradient(135deg, #FAFBFC 0%, #F0F9F9 100%);
-}
+} */
 
 .container {
     max-width: var(--container-max-width);
     margin: 0 auto;
     padding: 0 var(--container-padding);
 }
+
+/* .whyText{} */
 
 .whyContent {
     display: grid;
@@ -26,6 +28,7 @@
 
 .sectionDescription {
     font-size: 1.125rem;
+    width: 351px;
     line-height: 1.7;
     color: var(--color-text-secondary);
     margin-bottom: var(--spacing-lg);
@@ -75,20 +78,16 @@
 
 .whyImage {
     position: relative;
+    width: 616px;
+    height: 559px;
 }
 
-.whyImageWrapper {
-    position: relative;
-    z-index: 2;
-    border-radius: var(--radius-xl);
-    overflow: hidden;
-    box-shadow: var(--shadow-lg);
-}
+
 
 .whyImageWrapper img {
-    width: 100%;
-    height: auto;
-    display: block;
+    width: 616px;
+    height: 559px;
+    object-fit: cover;
 }
 
 .blob {
