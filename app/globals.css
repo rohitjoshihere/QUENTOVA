@@ -111,7 +111,9 @@ button {
   outline: none;
   transition: all var(--transition-base);
 }
-
+main{
+  overflow: hidden !important;
+}
 /* ===================================
    GLOBAL BUTTON STYLES
    =================================== */

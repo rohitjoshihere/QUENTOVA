@@ -13,7 +13,7 @@ export default function CTA() {
                     <p className={styles.ctaDescription}>
                         Ready to transform your business? Let's start a conversation about your goals and how we can help you achieve them.
                     </p>
-                    <Button showIcon={false}>Contact Us</Button>
+                    <Button showIcon={true}>Talk to an Expert</Button>
                 </div>
             </div>
         </section>

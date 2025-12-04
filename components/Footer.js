@@ -11,7 +11,7 @@ export default function Footer() {
                     <div className={styles.footerColumn}>
                         <div className={styles.footerLogo}>
                             <Image
-                                src="/logo.jpg"
+                                src="/logo2.png"
                                 alt="Questova Logo"
                                 width={100}
                                 height={100}

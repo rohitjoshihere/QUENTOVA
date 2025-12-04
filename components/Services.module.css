@@ -10,7 +10,7 @@
 }
 
 .sectionTitle {
-    
+
     font-size: 2.5rem;
     font-weight: var(--font-weight-bold);
     line-height: 1.2;
@@ -132,22 +132,92 @@
     background: #B7B4B4;
 }
 
+/* Tablet Styles */
 @media (max-width: 1024px) {
+    .container {
+        padding: 0 var(--spacing-xl);
+    }
+
     .servicesGrid {
         grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
     }
 
     .sectionTitle {
         font-size: 2rem;
+        text-align: center;
+    }
+
+    .sectionDescription {
+        text-align: center;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
+/* Mobile Styles */
 @media (max-width: 768px) {
+    .services {
+        padding: var(--spacing-2xl) 0;
+    }
+
+    .container {
+        padding: 0 var(--spacing-lg);
+    }
+
     .sectionTitle {
         font-size: 1.75rem;
+        margin-bottom: var(--spacing-sm);
+    }
+
+    .sectionDescription {
+        font-size: 1rem;
+        margin-bottom: var(--spacing-xl);
+    }
+
+    .servicesGrid {
+        gap: var(--spacing-md);
     }
 
     .serviceCard {
         padding: var(--spacing-lg);
+    }
+
+    .serviceTitle {
+        font-size: 1.25rem;
+    }
+
+    .serviceDescription {
+        font-size: 0.95rem;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 var(--spacing-md);
+    }
+
+    .sectionTitle {
+        font-size: 1.5rem;
+    }
+
+    .serviceCard {
+        padding: var(--spacing-md);
+    }
+
+    .paginationDots {
+        gap: 4px;
+    }
+
+    .dot {
+        width: 10px;
+        height: 10px;
+    }
+
+    .dot.active {
+        width: 40px;
+        height: 10px;
     }
 }

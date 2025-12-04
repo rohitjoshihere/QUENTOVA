@@ -41,7 +41,7 @@ export default function Header() {
                 <nav className={styles.nav}>
                     <div className={styles.logo}>
                         <Image
-                            src="/logo.jpg"
+                            src="/logo.png"
                             alt="Questova Logo"
                             width={160}
                             height={45}
