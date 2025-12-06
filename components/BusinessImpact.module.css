@@ -129,6 +129,70 @@
     box-shadow: 0 6px 20px rgba(45, 155, 155, 0.35);
 }
 
+/* Large Screens (1440px and above) */
+@media (min-width: 1440px) {
+    .container {
+        max-width: 1400px;
+        padding: 0 calc(var(--container-padding) * 1.5);
+    }
+
+    .impactContent {
+        gap: calc(var(--spacing-3xl) * 1.5);
+    }
+
+    .sectionTitle {
+        font-size: 3rem;
+    }
+
+    .sectionDescription {
+        font-size: 1.25rem;
+        line-height: 28px;
+    }
+
+    .cube {
+        width: 240px;
+        height: 240px;
+    }
+
+    .treeIcon {
+        font-size: 5rem;
+    }
+}
+
+/* Extra Large Screens (1920px and above) */
+@media (min-width: 1920px) {
+    .container {
+        max-width: 1800px;
+        padding: 0 calc(var(--container-padding) * 2);
+    }
+
+    .impactContent {
+        gap: calc(var(--spacing-3xl) * 2);
+    }
+
+    .sectionTitle {
+        font-size: 3.5rem;
+    }
+
+    .sectionDescription {
+        font-size: 1.375rem;
+        line-height: 32px;
+    }
+
+    .cube {
+        width: 280px;
+        height: 280px;
+    }
+
+    .treeIcon {
+        font-size: 6rem;
+    }
+
+    .arrow {
+        font-size: 2.5rem;
+    }
+}
+
 /* Tablet Styles */
 @media (max-width: 1024px) {
     .businessImpact {

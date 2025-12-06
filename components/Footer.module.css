@@ -70,6 +70,54 @@
     transform: translateX(4px);
 }
 
+/* Large Screens (1440px and above) */
+@media (min-width: 1440px) {
+    .container {
+        max-width: 1400px;
+    }
+
+    .footerContent {
+        gap: calc(var(--spacing-xl) * 1.5);
+    }
+
+    .footerTitle {
+        font-size: 1.25rem;
+    }
+
+    .footerDescription {
+        font-size: 1.0625rem;
+        line-height: 1.7;
+    }
+}
+
+/* Extra Large Screens (1920px and above) */
+@media (min-width: 1920px) {
+    .container {
+        max-width: 1800px;
+    }
+
+    .footerContent {
+        gap: calc(var(--spacing-xl) * 2);
+    }
+
+    .logoText {
+        font-size: 1.75rem;
+    }
+
+    .footerTitle {
+        font-size: 1.375rem;
+    }
+
+    .footerDescription {
+        font-size: 1.125rem;
+        line-height: 1.8;
+    }
+
+    .footerLinks a {
+        font-size: 1.0625rem;
+    }
+}
+
 /* Tablet Styles */
 @media (max-width: 1024px) {
     .footer {

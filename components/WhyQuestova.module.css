@@ -89,6 +89,68 @@
     top: -200px;
 }
 
+/* Large Screens (1440px and above) */
+@media (min-width: 1440px) {
+    .whyQuestova {
+        padding: 0 calc(var(--spacing-3xl) * 1.5);
+    }
+
+    .container {
+        padding: 0 calc(var(--container-padding) * 1.5);
+        padding-bottom: calc(var(--spacing-3xl) * 1.5);
+    }
+
+    .whyText {
+        width: 38%;
+    }
+
+    .sectionTitle {
+        font-size: 3rem;
+    }
+
+    .sectionDescription {
+        font-size: 1.25rem;
+        line-height: 1.8;
+    }
+
+    .whyImage {
+        width: 900px;
+        right: -80px;
+        top: -240px;
+    }
+}
+
+/* Extra Large Screens (1920px and above) */
+@media (min-width: 1920px) {
+    .whyQuestova {
+        padding: 0 calc(var(--spacing-3xl) * 2);
+    }
+
+    .container {
+        padding: 0 calc(var(--container-padding) * 2);
+        padding-bottom: calc(var(--spacing-3xl) * 2);
+    }
+
+    .whyText {
+        width: 40%;
+    }
+
+    .sectionTitle {
+        font-size: 3.5rem;
+    }
+
+    .sectionDescription {
+        font-size: 1.375rem;
+        line-height: 1.9;
+    }
+
+    .whyImage {
+        width: 1000px;
+        right: -100px;
+        top: -280px;
+    }
+}
+
 /* Tablet Styles */
 @media (max-width: 1024px) {
     .whyQuestova {

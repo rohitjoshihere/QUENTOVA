@@ -181,6 +181,36 @@
     width: 100%;
 }
 
+/* Large Screens (1440px and above) */
+@media (min-width: 1440px) {
+    .container {
+        max-width: 1400px;
+    }
+
+    .navMenu {
+        gap: 5rem;
+    }
+}
+
+/* Extra Large Screens (1920px and above) */
+@media (min-width: 1920px) {
+    .container {
+        max-width: 1800px;
+    }
+
+    .navMenu {
+        gap: 6rem;
+    }
+
+    .logoText {
+        font-size: 1.75rem;
+    }
+
+    .navMenu a {
+        font-size: 1.125rem;
+    }
+}
+
 /* Tablet Styles */
 @media (max-width: 1024px) {
     .navMenu {

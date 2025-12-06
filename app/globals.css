@@ -111,9 +111,11 @@ button {
   outline: none;
   transition: all var(--transition-base);
 }
-main{
+
+main {
   overflow: hidden !important;
 }
+
 /* ===================================
    GLOBAL BUTTON STYLES
    =================================== */
@@ -242,5 +244,25 @@ main{
 
   50% {
     opacity: 1;
+  }
+}
+
+/* ===================================
+   RESPONSIVE DESIGN SYSTEM
+   =================================== */
+
+/* Large Screens (1440px and above) */
+@media (min-width: 1440px) {
+  :root {
+    --container-max-width: 1400px;
+    --container-padding: 3rem;
+  }
+}
+
+/* Extra Large Screens (1920px and above) */
+@media (min-width: 1920px) {
+  :root {
+    --container-max-width: 1800px;
+    --container-padding: 4rem;
   }
 }

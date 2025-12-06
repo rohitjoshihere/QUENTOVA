@@ -132,6 +132,70 @@
     background: #B7B4B4;
 }
 
+/* Large Screens (1440px and above) */
+@media (min-width: 1440px) {
+    .container {
+        padding: 0 calc(var(--spacing-3xl) * 1.5);
+    }
+
+    .sectionTitle {
+        font-size: 3rem;
+        margin-bottom: var(--spacing-lg);
+    }
+
+    .sectionDescription {
+        font-size: 1.25rem;
+        margin-bottom: calc(var(--spacing-2xl) * 1.2);
+    }
+
+    .servicesGrid {
+        gap: var(--spacing-lg);
+    }
+
+    .serviceCard {
+        padding: 3rem 2.5rem;
+    }
+
+    .serviceTitle {
+        font-size: 1.5rem;
+    }
+
+    .serviceDescription {
+        font-size: 1rem;
+    }
+}
+
+/* Extra Large Screens (1920px and above) */
+@media (min-width: 1920px) {
+    .container {
+        padding: 0 calc(var(--spacing-3xl) * 2);
+    }
+
+    .sectionTitle {
+        font-size: 3.5rem;
+    }
+
+    .sectionDescription {
+        font-size: 1.375rem;
+    }
+
+    .servicesGrid {
+        gap: var(--spacing-xl);
+    }
+
+    .serviceCard {
+        padding: 3.5rem 3rem;
+    }
+
+    .serviceTitle {
+        font-size: 1.625rem;
+    }
+
+    .serviceDescription {
+        font-size: 1.0625rem;
+    }
+}
+
 /* Tablet Styles */
 @media (max-width: 1024px) {
     .container {

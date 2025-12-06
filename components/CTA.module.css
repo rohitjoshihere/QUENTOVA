@@ -72,6 +72,59 @@
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
+/* Large Screens (1440px and above) */
+@media (min-width: 1440px) {
+    .cta {
+        height: 85vh;
+    }
+
+    .container {
+        max-width: 1400px;
+    }
+
+    .ctaContent {
+        bottom: 100px;
+        max-width: 1000px;
+    }
+
+    .ctaTitle {
+        font-size: 3.5rem;
+    }
+
+    .ctaDescription {
+        font-size: 1.375rem;
+    }
+}
+
+/* Extra Large Screens (1920px and above) */
+@media (min-width: 1920px) {
+    .cta {
+        height: 90vh;
+    }
+
+    .container {
+        max-width: 1800px;
+    }
+
+    .ctaContent {
+        bottom: 120px;
+        max-width: 1200px;
+    }
+
+    .ctaTitle {
+        font-size: 4rem;
+    }
+
+    .ctaDescription {
+        font-size: 1.5rem;
+    }
+
+    .btnSecondary {
+        padding: 1rem 2.5rem;
+        font-size: 1.125rem;
+    }
+}
+
 /* Tablet Styles */
 @media (max-width: 1024px) {
     .cta {
