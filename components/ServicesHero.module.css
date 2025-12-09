@@ -105,8 +105,8 @@
     }
 
     .content {
-        padding-top: var(--spacing-xl);
-        padding-bottom: var(--spacing-2xl);
+        padding-top: var(--spacing-3xl);
+        padding-bottom: 0;
         width: 100%;
         max-width: 700px;
     }
@@ -139,8 +139,8 @@
     }
 
     .content {
-        padding-top: var(--spacing-lg);
-        padding-bottom: var(--spacing-xl);
+        padding-top: 8rem;
+        padding-bottom: 0;
     }
 
     .title {
@@ -173,8 +173,8 @@
     }
 
     .content {
-        padding-top: var(--spacing-md);
-        padding-bottom: var(--spacing-lg);
+        padding-top: var(--spacing-2xl);
+        padding-bottom: 0;
     }
 
     .title {
