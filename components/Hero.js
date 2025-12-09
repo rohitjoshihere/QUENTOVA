@@ -10,7 +10,7 @@ export default function Hero() {
             <div className={styles.heroContent}>
                 <div className={styles.heroText}>
                     <h1 className={styles.heroTitle}>
-                        Building Future Ready Enterprise with Intelligent Automations & Agentic AI
+                        Building Future Ready <br /> Enterprise with Intelligent <br /> Automations & Agentic AI
                     </h1>
                     <p className={styles.heroDescription}>
                         Bridging the gap between automation hype and real business efficiency.

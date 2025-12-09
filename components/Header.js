@@ -2,12 +2,15 @@
 
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import Button from './Button';
 import styles from './Header.module.css';
 
 export default function Header() {
     const [scrolled, setScrolled] = useState(false);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const pathname = usePathname();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -35,26 +38,41 @@ export default function Header() {
         };
     }, [mobileMenuOpen]);
 
+    const navItems = [
+        { name: 'Home', href: '/' },
+        { name: 'Services', href: '/services' },
+        { name: 'Solutions', href: '/solutions' },
+        { name: 'About Us', href: '/about' },
+    ];
+
     return (
         <header className={`${styles.header} ${scrolled ? styles.scrolled : ''}`}>
             <div className={styles.container}>
                 <nav className={styles.nav}>
                     <div className={styles.logo}>
-                        <Image
-                            src="/logo.png"
-                            alt="Questova Logo"
-                            width={160}
-                            height={45}
-                            className={styles.logoImage}
-                        />
+                        <Link href="/">
+                            <Image
+                                src="/logo.png"
+                                alt="Questova Logo"
+                                width={160}
+                                height={45}
+                                className={styles.logoImage}
+                            />
+                        </Link>
                     </div>
 
                     {/* Desktop Menu */}
                     <ul className={styles.navMenu}>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#solutions">Solutions</a></li>
-                        <li><a href="#about">About Us</a></li>
+                        {navItems.map((item) => (
+                            <li key={item.name}>
+                                <Link
+                                    href={item.href}
+                                    className={`${styles.navLink} ${pathname === item.href ? styles.active : ''}`}
+                                >
+                                    {item.name}
+                                </Link>
+                            </li>
+                        ))}
                     </ul>
 
                     {/* Desktop Button */}
@@ -77,10 +95,17 @@ export default function Header() {
                 {/* Mobile Menu */}
                 <div className={`${styles.mobileMenu} ${mobileMenuOpen ? styles.open : ''}`}>
                     <ul className={styles.mobileNavList}>
-                        <li><a href="#home" onClick={handleLinkClick}>Home</a></li>
-                        <li><a href="#services" onClick={handleLinkClick}>Services</a></li>
-                        <li><a href="#solutions" onClick={handleLinkClick}>Solutions</a></li>
-                        <li><a href="#about" onClick={handleLinkClick}>About Us</a></li>
+                        {navItems.map((item) => (
+                            <li key={item.name}>
+                                <Link
+                                    href={item.href}
+                                    onClick={handleLinkClick}
+                                    className={`${styles.mobileNavLink} ${pathname === item.href ? styles.active : ''}`}
+                                >
+                                    {item.name}
+                                </Link>
+                            </li>
+                        ))}
                     </ul>
                     <div className={styles.mobileButton}>
                         <Button variant="small">Get in Touch</Button>

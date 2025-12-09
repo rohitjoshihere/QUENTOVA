@@ -1,0 +1,123 @@
+.hero {
+    padding: var(--spacing-3xl) 0;
+    /* background: var(--color-white); */
+    overflow: hidden;
+    position: relative;
+    background-image: url('/hero2.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    height: 666px;
+}
+
+.container {
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-2xl);
+    height: 100%;
+}
+
+.content {
+    flex: 1;
+    z-index: 2;
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    /* background: red; */
+}
+
+.title {
+    font-size: 32px;
+    font-weight: var(--font-weight-bold);
+    line-height: 1.2;
+    color: var(--color-text-primary);
+    margin-bottom: var(--spacing-md);
+}
+
+.description {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--color-text-secondary);
+    max-width: 600px;
+    margin-bottom: var(--spacing-sm);
+}
+
+.imageWrapper {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.image {
+    position: relative;
+    z-index: 2;
+    object-fit: contain;
+    max-width: 100%;
+    height: auto;
+}
+
+.blob {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120%;
+    height: 120%;
+    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%232D9B9B' d='M44.7,-76.4C58.9,-69.2,71.8,-59.1,81.6,-46.6C91.4,-34.1,98.1,-19.2,95.8,-4.9C93.5,9.4,82.2,23.1,70.8,34.8C59.4,46.5,47.9,56.2,35.2,63.4C22.5,70.6,8.6,75.3,-4.1,82.4C-16.8,89.5,-28.3,99,-39.3,96.3C-50.3,93.6,-60.8,78.7,-69.6,64.2C-78.4,49.7,-85.5,35.6,-88.2,20.6C-90.9,5.6,-89.2,-10.3,-82.3,-24.1C-75.4,-37.9,-63.3,-49.6,-50.3,-57.3C-37.3,-65,-23.4,-68.7,-9.8,-68.1C3.8,-67.5,17.6,-62.6,30.5,-83.6L44.7,-76.4Z' transform='translate(100 100)' /%3E%3C/svg%3E") no-repeat center center;
+    background-size: contain;
+    z-index: 1;
+    opacity: 0.2;
+}
+
+@media (max-width: 1024px) {
+    .hero {
+        height: auto;
+        min-height: 800px;
+        background-position: center bottom;
+        background-size: 80%;
+        padding-bottom: var(--spacing-3xl);
+    }
+
+    .container {
+        flex-direction: column;
+        text-align: center;
+        justify-content: flex-start;
+        padding-top: var(--spacing-2xl);
+    }
+
+    .content {
+        padding-top: 0;
+        width: 100%;
+        max-width: 700px;
+    }
+
+    .description {
+        margin: 0 auto var(--spacing-sm);
+    }
+
+    .imageWrapper {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        min-height: 700px;
+        background-size: 100%;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .content {
+        padding-bottom: 200px;
+        /* Ensure text doesn't overlap with bottom image */
+    }
+}

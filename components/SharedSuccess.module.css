@@ -1,0 +1,66 @@
+.section {
+    position: relative;
+    padding: var(--spacing-3xl) 0;
+    background-image: url('/hero2.jpg');
+    /* Using hero2.jpg as placeholder for handshake image */
+    background-size: cover;
+    background-position: center;
+    color: var(--color-white);
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 100%);
+    z-index: 1;
+}
+
+.container {
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+    position: relative;
+    z-index: 2;
+    width: 100%;
+}
+
+.content {
+    max-width: 600px;
+}
+
+.title {
+    font-size: 3rem;
+    font-weight: var(--font-weight-bold);
+    margin-bottom: var(--spacing-md);
+    line-height: 1.2;
+}
+
+.description {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    margin-bottom: var(--spacing-lg);
+    opacity: 0.9;
+}
+
+.list {
+    list-style: none;
+    padding: 0;
+    font-size: 1.125rem;
+    font-weight: var(--font-weight-bold);
+}
+
+.list li {
+    margin-bottom: var(--spacing-xs);
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 2rem;
+    }
+}
