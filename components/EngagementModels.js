@@ -7,7 +7,7 @@ export default function EngagementModels() {
         {
             title: "Fixed Scope Delivery",
             icon: (
-                <img src="/engagement1.png" alt="Automation Program Ownership" />
+                <img src="/Engagement1.png" alt="Automation Program Ownership" />
             ),
             bestFor: "Best for: POCs, pilots, or departmental initiatives",
             points: [
@@ -20,7 +20,7 @@ export default function EngagementModels() {
         {
             title: "Automation Program Ownership",
             icon: (
-                <img src="/engagement2.png" alt="Automation Program Ownership" />
+                <img src="/Engagement2.png" alt="Automation Program Ownership" />
             ),
             bestFor: "Best for: Organizations scaling Intelligent Automation across functions",
             points: [
@@ -33,7 +33,7 @@ export default function EngagementModels() {
         {
             title: "Capacity Augmentation",
             icon: (
-                <img src="/engagement3.png" alt="Automation Program Ownership" />
+                <img src="/Engagement3.png" alt="Automation Program Ownership" />
             ),
             bestFor: "Best for: IT or Automation teams needing certified experts on demand",
             points: [
