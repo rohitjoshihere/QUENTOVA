@@ -1,12 +1,12 @@
 .section {
     position: relative;
     padding: var(--spacing-3xl) 0;
-    background-image: url('/hero2.jpg');
+    background-image: url('/Shared-Success.jpg');
     /* Using hero2.jpg as placeholder for handshake image */
     background-size: cover;
     background-position: center;
     color: var(--color-white);
-    min-height: 500px;
+    height: 735;
     display: flex;
     align-items: center;
 }
@@ -17,8 +17,10 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 100%);
+    /* background: linear-gradient(90deg, #00000000 0%, #000000); */
     z-index: 1;
+    background: linear-gradient(270deg, rgba(0, 0, 0, 0) 14.31%, #000000 96.67%);
+
 }
 
 .container {
@@ -35,23 +37,23 @@
 }
 
 .title {
-    font-size: 3rem;
+    font-size: 32px;
     font-weight: var(--font-weight-bold);
-    margin-bottom: var(--spacing-md);
-    line-height: 1.2;
+    margin-bottom: var(--spacing-sm);
+    line-height: 100%;
 }
 
 .description {
-    font-size: 1.125rem;
+    font-size: 16px;
     line-height: 1.6;
-    margin-bottom: var(--spacing-lg);
+    margin-bottom: var(--spacing-xs);
     opacity: 0.9;
 }
 
 .list {
     list-style: none;
     padding: 0;
-    font-size: 1.125rem;
+    font-size: 16px;
     font-weight: var(--font-weight-bold);
 }
 

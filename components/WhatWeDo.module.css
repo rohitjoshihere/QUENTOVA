@@ -10,17 +10,19 @@
 }
 
 .sectionTitle {
-    font-size: 2.5rem;
+    font-size: 32px;
     font-weight: var(--font-weight-bold);
     color: var(--color-text-primary);
-    margin-bottom: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
+    line-height: 1.6;
+
 }
 
 .sectionDescription {
     font-size: 1.125rem;
     color: var(--color-text-secondary);
-    max-width: 800px;
-    margin-bottom: var(--spacing-xl);
+    /* max-width: 800px; */
+    margin-bottom: var(--spacing-md);
     line-height: 1.6;
 }
 
@@ -36,17 +38,23 @@
     border-radius: var(--radius-lg);
     overflow: hidden;
     box-shadow: var(--shadow-md);
-    transition: flex 0.5s cubic-bezier(0.25, 1, 0.5, 1), height 0.5s cubic-bezier(0.25, 1, 0.5, 1), transform var(--transition-base);
+    transition:
+        flex 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+        height 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+        transform 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+        box-shadow 0.6s cubic-bezier(0.4, 0, 0.2, 1);
     display: flex;
     flex-direction: column;
     flex: 252;
     min-width: 0;
+    will-change: flex, height, transform;
 }
 
 .card:hover {
     flex: 418;
     height: 600px;
     transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
     z-index: 10;
 }
 
@@ -73,7 +81,8 @@
     inset: 0;
     background: rgba(45, 155, 155, 0.6);
     z-index: 2;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: opacity;
 }
 
 .card:hover .imageOverlay {
@@ -107,8 +116,12 @@
 .subtextWrapper {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.4s ease, opacity 0.4s ease;
+    transition:
+        max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+        opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+        margin-bottom 0.6s cubic-bezier(0.4, 0, 0.2, 1);
     opacity: 0;
+    will-change: max-height, opacity;
 }
 
 .card:hover .subtextWrapper {
@@ -136,6 +149,37 @@
 .cardLink:hover {
     text-decoration: underline;
 }
+
+/* Pagination Dots */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: var(--spacing-sm);
+    padding: var(--spacing-md) 0;
+}
+
+.dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 100px;
+    background-color: #d1d5db;
+    border: none;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 0;
+}
+
+.dot:hover {
+    background-color: #D9D9D9;
+}
+
+.dotActive {
+    background-color: #B7B4B4;
+    width: 65px;
+}
+
 
 @media (max-width: 1024px) {
     .section {
@@ -165,12 +209,16 @@
     .card {
         height: 500px;
         flex: none;
+        transition:
+            transform 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+            box-shadow 0.6s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     .card:hover {
         flex: none;
         height: 500px;
         transform: translateY(-5px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
     }
 
     .content {
@@ -196,6 +244,11 @@
         padding: 0 var(--spacing-lg);
     }
 
+    .grid {
+        margin: 0 calc(-1 * var(--spacing-lg));
+        padding: 0 var(--spacing-lg);
+    }
+
     .sectionTitle {
         font-size: 1.75rem;
         margin-bottom: var(--spacing-sm);
@@ -209,13 +262,30 @@
     }
 
     .grid {
-        grid-template-columns: 1fr;
-        gap: var(--spacing-lg);
+        display: flex;
+        overflow-x: auto;
+        overflow-y: hidden;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        gap: var(--spacing-md);
+        padding-bottom: var(--spacing-sm);
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        /* Firefox */
+        -ms-overflow-style: none;
+        /* IE and Edge */
+    }
+
+    .grid::-webkit-scrollbar {
+        display: none;
+        /* Chrome, Safari, Opera */
     }
 
     .card {
+        flex: 0 0 85%;
         height: auto;
         min-height: 450px;
+        scroll-snap-align: center;
     }
 
     .card:hover {
@@ -239,6 +309,20 @@
     .cardLink {
         font-size: 0.875rem;
     }
+
+    .pagination {
+        margin-top: var(--spacing-lg);
+        gap: 10px;
+    }
+
+    .dot {
+        width: 35px;
+        height: 7px;
+    }
+
+    .dotActive {
+        width: 45px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -247,6 +331,11 @@
     }
 
     .container {
+        padding: 0 var(--spacing-md);
+    }
+
+    .grid {
+        margin: 0 calc(-1 * var(--spacing-md));
         padding: 0 var(--spacing-md);
     }
 
@@ -262,10 +351,11 @@
     }
 
     .grid {
-        gap: var(--spacing-md);
+        gap: var(--spacing-sm);
     }
 
     .card {
+        flex: 0 0 90%;
         min-height: 400px;
     }
 
@@ -291,5 +381,19 @@
     .cardLink svg {
         width: 10px;
         height: 10px;
+    }
+
+    .pagination {
+        margin-top: var(--spacing-md);
+        gap: 8px;
+    }
+
+    .dot {
+        width: 30px;
+        height: 6px;
+    }
+
+    .dotActive {
+        width: 40px;
     }
 }

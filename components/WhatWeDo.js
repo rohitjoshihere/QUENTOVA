@@ -1,9 +1,12 @@
 'use client';
 
+import { useState } from 'react';
 import Image from 'next/image';
 import styles from './WhatWeDo.module.css';
 
 export default function WhatWeDo() {
+    const [activeCard, setActiveCard] = useState(0);
+
     const services = [
         {
             title: "Consulting- Simplify - Strategize - Scale",
@@ -38,7 +41,12 @@ export default function WhatWeDo() {
 
                 <div className={styles.grid}>
                     {services.map((service, index) => (
-                        <div key={index} className={styles.card}>
+                        <div
+                            key={index}
+                            className={styles.card}
+                            onMouseEnter={() => setActiveCard(index)}
+                            onMouseLeave={() => setActiveCard(0)}
+                        >
                             <div className={styles.imageWrapper}>
                                 <Image
                                     src={service.image}
@@ -62,6 +70,18 @@ export default function WhatWeDo() {
                                 </a>
                             </div>
                         </div>
+                    ))}
+                </div>
+
+                {/* Pagination Dots */}
+                <div className={styles.pagination}>
+                    {services.map((_, index) => (
+                        <button
+                            key={index}
+                            className={`${styles.dot} ${activeCard === index ? styles.dotActive : ''}`}
+                            onClick={() => setActiveCard(index)}
+                            aria-label={`View card ${index + 1}`}
+                        />
                     ))}
                 </div>
             </div>

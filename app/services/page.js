@@ -13,9 +13,9 @@ export default function ServicesPage() {
             <main>
                 <ServicesHero />
                 <WhatWeDo />
-                {/* <HowWeDeliver /> */}
-                {/* <EngagementModels /> */}
-                {/* <SharedSuccess /> */}
+                <HowWeDeliver />
+                <EngagementModels />
+                <SharedSuccess />
             </main>
             <Footer />
         </>

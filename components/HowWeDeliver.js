@@ -12,8 +12,6 @@ export default function HowWeDeliver() {
                     <div className={styles.textBlock}>
                         <p>
                             Every automation we deliver is backed by our frameworks — eliminate guesswork and subjectivity from every automation lifecycle stage. They make every automation measurable, repeatable, and governed by data, not opinion.
-                        </p>
-                        <p>
                             Our Frameworks and Platforms include:
                         </p>
                         <ul className={styles.list}>
@@ -22,13 +20,7 @@ export default function HowWeDeliver() {
                     </div>
                 </div>
                 <div className={styles.imageWrapper}>
-                    <Image
-                        src="/frameworks-image.png"
-                        alt="How We Deliver"
-                        width={600}
-                        height={500}
-                        className={styles.image}
-                    />
+                    <img src="/howwe.png" className='hero-image' alt="How We Deliver" />
                 </div>
             </div>
         </section>

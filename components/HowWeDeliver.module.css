@@ -1,5 +1,6 @@
 .section {
-    padding: var(--spacing-3xl) 0;
+    padding: 0;
+    padding-top: 0;
     background: var(--color-white);
 }
 
@@ -13,24 +14,28 @@
 }
 
 .content {
-    flex: 1;
+    /* flex: 1; */
+    /* padding-top: var(--spacing-xl); */
+    width: 40%;
 }
 
 .title {
-    font-size: 2.5rem;
+    font-size: 32px;
     font-weight: var(--font-weight-bold);
     color: var(--color-text-primary);
-    margin-bottom: var(--spacing-lg);
+    margin-bottom: var(--spacing-sm);
 }
 
 .textBlock {
     font-size: 1.125rem;
-    line-height: 1.7;
+    line-height: 25px;
     color: var(--color-text-secondary);
 }
 
 .textBlock p {
-    margin-bottom: var(--spacing-md);
+    line-height: 25px;
+    letter-spacing: 0%;
+    /* margin-bottom: var(--spacing-md); */
 }
 
 .list {
@@ -38,6 +43,8 @@
     color: var(--color-text-primary);
     list-style: none;
     padding: 0;
+    line-height: 25px;
+    letter-spacing: 0%;
 }
 
 .imageWrapper {
@@ -46,10 +53,11 @@
     justify-content: center;
 }
 
-.image {
+.imageWrapper img {
     max-width: 100%;
-    height: auto;
+    height: 394px;
     object-fit: contain;
+    rotate: -5.5deg;
 }
 
 @media (max-width: 1024px) {

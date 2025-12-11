@@ -8,7 +8,7 @@ export default function SharedSuccess() {
             <div className={styles.overlay}></div>
             <div className={styles.container}>
                 <div className={styles.content}>
-                    <h2 className={styles.title}>Aligned for Shared Success</h2>
+                    <h2 className={styles.title}>Aligned for Shared <br/> Success</h2>
                     <p className={styles.description}>
                         Our engagement philosophy goes beyond contracts — it&apos;s built on commitment and partnership.
                         Each model is governed by three guiding principles that define how we work:
