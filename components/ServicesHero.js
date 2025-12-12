@@ -23,6 +23,9 @@ export default function ServicesHero() {
                         <br className={styles.desktopBr} /> predictable business impact.
                     </p>
                 </div>
+                <div className={styles.image}>
+                    <img src='/hero2.jpg' alt="hero-image" />
+                </div>
             </div>
         </section>
     );
